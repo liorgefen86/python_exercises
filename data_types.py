@@ -39,3 +39,20 @@ print(3 * "this is a string")
 
 # note that is works only with integers. If multiplied by a float, a
 # TypeError will be thrown
+
+# python has the possibility to work with complex numbers
+com = complex(3, 5)  # a complex number is created by calling the
+# complex function. The first argument is the real part and the second
+# the imaginary part. We can extract each part from the number by using
+# real and imag methods
+print(com.real)
+print(com.imag)
+
+# the last data type in python is the boolean. A boolean can be defined
+# using True or False. But is can also be defined using a logical
+# statement, which will be evaluated to True or False
+b1 = True
+b2 = False
+b3 = 3 > 4  # that's a logical statement which will return False,
+# because 3 is not greater than 4
+print(f'b1: {b1},\nb2: {b2},\nb3: {b3}')
