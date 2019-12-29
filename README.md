@@ -12,12 +12,13 @@ I will be following this [Udemy](https://www.udemy.com/course/complete-python-bo
 course, and of course, using some additional resources I will be finding and 
 will be adding here.
 
-- data types
+- data types (see this [article](https://pythonconquerstheuniverse.wordpress.com/2009/10/03/static-vs-dynamic-typing-of-programming-languages/))
     - [ ] integers
     - [ ] floating-point numbers
     - [ ] complex numbers
     - [ ] booleans
-- data structures (see [edX](https://www.edx.org/course/python-data-structures) course)
+- data structures (see [edX](https://www.edx.org/course/python-data-structures) course, or this
+[GeeksforGeeks](https://www.geeksforgeeks.org/data-structures/) article)
     - [ ] strings
     - [ ] files
     - [ ] lists
