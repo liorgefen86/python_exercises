@@ -19,7 +19,6 @@ will be adding here.
     - [ ] booleans
 - data structures (see [edX](https://www.edx.org/course/python-data-structures) course)
     - [ ] strings
-    - [ ] files
     - [ ] lists
     - [ ] dictionaries
     - [ ] tuples
@@ -30,5 +29,13 @@ article)
     - [ ] encapsulation
     - [ ] inheritance
     - [ ] polymorphism
+- Input/Output (or I/O):
+    - [ ] opening file
+    - [ ] reading file
+    - [ ] writing to a file
+- Multi-threading/parallel computing:
+    - [ ] thread
+    - [ ] multi-threading
+    - [ ] parallel computing   
 
 Above list will be updated as I am going forward in learning Python. 
