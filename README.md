@@ -19,6 +19,7 @@ will be adding here.
     - [ ] booleans
 - data structures (see [edX](https://www.edx.org/course/python-data-structures) course)
     - [ ] strings
+        * [Formatting strings](https://realpython.com/python-f-strings/)
     - [ ] lists
     - [ ] dictionaries
     - [ ] tuples

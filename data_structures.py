@@ -137,3 +137,16 @@ name_list.insert(0, 'frank')
 name_list.insert(3, 'frank')
 print(name_list.count('frank'))  # return the number of occurrence of the
 # element in the list
+
+# below is a small exercise on how to manipulate file, string and list
+import os
+
+os.chdir('/home/liorgefen/Downloads/')
+print(os.getcwd())
+
+with open('mbox-short.txt') as file:
+    for line in file:
+        words = line.strip().split()
+        if len(words) < 3 or not words[0] == 'From':
+            continue
+        print(words[2])
