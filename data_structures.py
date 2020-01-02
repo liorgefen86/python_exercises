@@ -29,6 +29,9 @@ print(s[5:])
 # the same is valid for negative indexes
 print(s[:-3])
 print(s[-6:])
+# the last thing about slicing is that is can be used with a step:
+print(s[::-1])  # in this case, on every two characters, one will be
+# skipped and will return a reduced size string
 
 print('-' * 15 + 'String Methods and Functions' + '-' * 15)
 # length of a string using 'len' function
@@ -150,3 +153,65 @@ with open('mbox-short.txt') as file:
         if len(words) < 3 or not words[0] == 'From':
             continue
         print(words[2])
+
+# exercise using list comprehension
+
+from random import randint
+
+random_list = lambda a, b, c: [randint(a, b) for c in range(c)]
+
+measures = list(zip(random_list(2, 40, 10), random_list(11, 109, 10),
+                    random_list(5, 15, 10)))
+volumes = [x * y * z for x, y, z in measures]
+print(measures)
+print(volumes)
+
+# exercise creating a dictionary with the number of occurrence of
+# each word in a string and sorting the result using sort and lambda
+
+word_count = dict()
+with open('mbox-short.txt') as file:
+    for line in file:
+        words = line.strip().replace(',', '').replace('?', '').\
+                replace('!', '').split()
+        for word in words:
+            word_count[word] = word_count.get(word, 0) + 1
+
+word_list = list(word_count.items())
+word_list.sort(key=lambda x: x[1], reverse=True)
+print(word_list)
+
+print(f'{"-"*20}passing variables by value{"-"*20}')
+# exercise below is to show the way python variables are working.
+# if the variable is re-assigned in a function, its external value
+# is changed too, as below:
+
+
+def test_function(arg: list):
+    arg.sort()
+
+
+a = [1, 5, 2, 8, 2, 9]
+print(f'before function call, a={a}')
+test_function(a)
+print(f'after function call, a={a}')
+
+print(f'{"-"*20}passing variables by reference{"-"*20}')
+# the value of a list as been updated in the function test_function.
+# if the function is re-writen, as below, test2_function, the external
+# variable is keeping its original value:
+
+
+def test2_function(arg: list):
+    arg = [1, 5, 2, 8, 2, 9]  # the variable will reference another
+    # object after running this line, even if the content is the same.
+    # could be accomplished with below line too:
+    # arg = arg.copy()  # a hard copy of the value is done here
+    arg.sort()
+    print(f'in the function call a={arg}')
+
+
+b = [1, 5, 2, 8, 2, 9]
+print(f'before function call, a={b}')
+test2_function(b)
+print(f'after function call, a={b}')
